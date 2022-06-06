@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tempo de Vida</title>
+    <link rel="shortcut icon" href="../../assets/icons8-chess-clock-48.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div id="box-title">
+        <h1>Seus dias Contados!</h1>
+        <p>
+          Digite a data de seu nascimento e descubra quantos dias de vida ainda 
+        tem.
+        </p>
+      </div>
+      <div id="box-content">
+        <label for="day">Dia</label>
+        <input id="day" type="number" />
+
+        <label for="month">Mês</label>
+        <input id="month" type="number" />
+
+        <label for="year">Ano</label>
+        <input id="year" type="number" />
+
+        <div id="check">            
+            <fieldset >
+                <legend>Qual o seu gênero?</legend>
+                <div id="radio">
+                    <input type="radio" name="genre" value="man" id="input-men" />
+                    <label for="input-men">Homem</label></br>
+                    <input type="radio" name="genre" value="women" id="input-women" />
+                    <label for="input-women">Mulher</label> 
+                </div>                  
+            </fieldset>                   
+        </div>
+
+        <button id="btn-check">VERIFICAR</button>
+      </div>
+      <div id="conclusion"></div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

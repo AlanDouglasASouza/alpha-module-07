@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/backgroud-years.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;    
+    width: 50%;
+    height: 100%;
+    flex-wrap: wrap;
+    color: #301604;
+    font-weight: bold;
+}
+
+#box-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    text-align: center;
+    font-size: 17pt;    
+}
+
+h1 {
+    font-size: 35pt;
+}
+
+#box-content {     
+    height: 40%;
+    /* margin-top: -130px; */
+}
+
+label {
+    font-size: 15pt;
+    font-weight: bolder;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    width: 60px;
+    border: none;
+    background-color: rgba(48, 22, 4, 0.4);
+    padding: 5px;
+    color: #ffd2b1;
+    font-size: 14pt;
+}
+
+fieldset {
+    border-color: #301604;
+    text-align: center;
+    height: 90px;
+}
+
+#check {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#radio {
+    text-align: left;
+}
+
+#btn-check {
+    width: 130px;
+    height: 45px;
+    font-size: 14pt;
+    color: #301604;
+    border: 1px solid #301604;
+    border-radius: 5px;
+    background-color: rgba(48, 22, 4, 0.2);
+    transition-duration: .5s;
+    font-weight: bolder;
+}
+
+#btn-check:hover {
+    -webkit-box-shadow: inset 10px 10px 300px 200px rgba(rgba(48, 22, 4, 0.76));
+    -moz-box-shadow: inset 10px 10px 300px 200px rgba(48, 22, 4, 0.76);
+    box-shadow: inset 10px 10px 300px 200px rgba(48, 22, 4, 0.76);
+    border: none;
+    color: #ffffff;
+}
+
+#conclusion {
+    display: none;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 20pt;
+    margin-bottom: 100px;
+    color: #ffd2b1;
+    -webkit-box-shadow: inset 10px 10px 300px 200px rgba(rgba(48, 22, 4, 0.76));
+    -moz-box-shadow: inset 10px 10px 300px 200px rgba(48, 22, 4, 0.76);
+    box-shadow: inset 10px 10px 300px 200px rgba(48, 22, 4, 0.76);    
+}
