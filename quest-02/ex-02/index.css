@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: rgb(255, 249, 249);
+}
+
+header {
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: rgb(53, 40, 40);    
+    padding-left: 40px;
+    font-size: 12pt;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#container {
+    display: flex;
+    height: 80%;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    width: 100%;  
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#box-title {    
+    height: 30%;
+    text-align: center;
+    justify-content: center;
+    font-size: 14pt;
+    gap: 2rem;
+}
+
+#box-title h1 {
+    font-size: 30pt;
+}
+
+#box-form {
+    height: 40%;
+    justify-content: flex-start;    
+}
+
+/* Estilizando o Formuláriuo */
+#form-string {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    display: flex;
+    align-self: flex-start;
+}
+
+input {
+    width: 400px;    
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+#btn-compare {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 130px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(56, 30, 30);
+    color: #ffffff;
+    font-size: 14pt;
+}
+
+#result {
+    height: 20%;
+    justify-content: center;
+    font-size: 15pt;
+}
+
+footer {
+    display: flex;
+    height: 40px;
+    width: 100vw;
+    background-color: rgb(53, 40, 40);
+    color: #ffffff;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+}
