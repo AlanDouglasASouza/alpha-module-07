@@ -12,7 +12,6 @@ btnCompare.onclick = (e) => {
     divResult.style = "display: flex";
     divResult.innerHTML = "O primeiro número é o maior!";
   } else if (numberOne.value < numbertwo.value) {
-    divResult.style = "display: none";
     divResult.style = "display: flex";
     divResult.innerHTML = "O primeiro número é o menor!";
   } else {

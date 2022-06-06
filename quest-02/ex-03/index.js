@@ -82,7 +82,7 @@ const validationData = () => {
     month.style = "border: none";
   }
   if (year.value.length != 4) {
-    alert("O ano de conter 4 dígitos. Por favor corrija o valor.");
+    alert("O ano deve conter 4 dígitos. Por favor corrija o valor.");
     year.style = "border: 1px solid red";
     return false;
   } else {
