@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons8-calendário-48.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Data</h1>
+        <p>
+          Escolha uma data e receba dia mês e ano em formato númerico, e o dia
+          da semana e o mês em português.
+        </p>
+      </div>
+      <div class="box" id="box-form">
+        <form class="box" id="forms" action="">
+          <input class="inputs" type="date" id="number-input" />
+          <input type="button" value="Exibir" id="btn-ver" />
+        </form>
+      </div>
+      <div id="result">
+        <p id="result-day"></p>
+        <p id="result-month"></p>
+        <p id="result-year"></p>
+        <p id="result-week"></p>
+        <p id="result-month-pt"></p>
+        <p id="result-time"></p>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons8-números-48.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Como escrever esse número?</h1>
+        <p>
+          Digite um número inteiro de 1 á 10, então, click em "Exibir" para
+          saber como se escreve este número.
+        </p>
+      </div>
+      <div class="box" id="box-form">
+        <form class="box" id="forms" action="">
+          <input
+            class="inputs"
+            type="number"
+            id="number-input"
+            placeholder="Digite o número"
+          />
+          <input type="button" value="Exibir" id="btn-ver" />
+        </form>
+      </div>
+      <div id="result">
+        <p id="result-text"></p>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
