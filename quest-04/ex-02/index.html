@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteador de Número</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Sorteador de Número</h1>
+        <p>
+          Digite um número inteiro para ser o valor mínimo, e outro número para
+          ser o valor maximo, e então click em sortear para ter o número
+          sorteado!
+        </p>
+      </div>
+      <div class="box" id="box-form">
+        <form class="box" id="form-imc" action="">
+          <input
+            class="input-text"
+            type="text"
+            id="min"
+            placeholder="Digite o número mínimo"
+          />
+          <input
+            class="input-text"
+            type="text"
+            id="max"
+            placeholder="Digite o número máximo"
+          />
+
+          <input type="button" value="Sortear" id="btn-sort" />
+        </form>
+      </div>
+      <div id="result">
+        <h1 id="result-title"></h1>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

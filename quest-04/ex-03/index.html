@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Qual número inteiro mais proximo?</h1>
+        <p>
+          Digite um número não inteiro, com casas decimais, click em verificar
+          para saber qual número inteiro mais perto dele.
+        </p>
+      </div>
+      <div class="box" id="box-form">
+        <form class="box" id="form-imc" action="">
+          <input
+            class="input-text"
+            type="text"
+            id="number-float"
+            placeholder="Digite o número"
+          />
+          <input type="button" value="Verificar" id="btn-ver" />
+        </form>
+      </div>
+      <div id="result">
+        <p id="result-min"></p>
+        <p id="result-max"></p>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

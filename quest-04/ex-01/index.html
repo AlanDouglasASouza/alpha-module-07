@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMC</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Qual o seu IMC?</h1>
+        <p>
+          Digite o seu peso e a sua altura e click em calcular para descubrir
+          seu IMC.
+        </p>
+      </div>
+      <div class="box" id="box-form">
+        <form class="box" id="form-imc" action="">
+          <input
+            class="input-text"
+            type="text"
+            id="weight"
+            placeholder="Digite seu peso"
+          />
+          <input
+            class="input-text"
+            type="text"
+            id="height"
+            placeholder="Digite sua altura"
+          />
+
+          <input type="button" value="Calcular" id="btn-imc" />
+        </form>
+      </div>
+      <div id="result">
+        <h1 id="imc"></h1>
+        <p id="text-imc"></p>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
