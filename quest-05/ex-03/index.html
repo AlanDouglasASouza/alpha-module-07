@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frutas</title>
+    <link rel="shortcut icon" href="../../assets/icons8-banana-doce-48.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="container">      
+      <div class="box" id="box-calc">
+          <div class="box" id="box-title">
+        <h1>Frutas</h1>
+        <p>
+          Escolha uma fruta das opções e click em exibir para ver a fruta que escolheu!
+        </p>
+      </div>
+        <form action="#" id="form-calc">
+                  
+          <select name="operation" id="select-operation">
+            <option value="" disabled selected>Escolha uma Fruta</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Laranja</option>
+            <option value="strawberry">Morango</option>
+            <option value="peach">Pêssego</option>
+            <option value="grape">Uva</option>
+
+          </select></br>
+          <button id="btn-ex">Exibir</button>
+        </form>
+        <div id="result"></div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
