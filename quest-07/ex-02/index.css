@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url('https://cdn.pixabay.com/photo/2013/08/11/04/24/city-171444_960_720.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-box-shadow: inset 10px 10px 300px 200px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 10px 10px 300px 200px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 10px 10px 300px 200px rgba(0, 0, 0, 0.6);
+}
+
+#container {
+    display: flex;
+    height: auto;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+    gap: 2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#box-title {
+    height: 20%;
+    font-size: 14pt;
+    gap: 1rem;
+    padding: 10px;
+}
+
+#forms {
+    gap: 1rem;
+    padding: 15px;
+}
+
+.inputs {
+    padding-left: 15px;
+    width: 170px;
+    height: 40px;
+    margin-top: -30px;
+    border-radius: 4px;        
+    font-size: 14pt;
+}
+
+@media(max-width: 650px) {
+    #container {
+        width: 85%;
+    }
+}
