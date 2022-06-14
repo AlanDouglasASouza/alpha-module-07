@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha Chat</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons8-bate-papo-cheio-48.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Alpha Chat</h1>
+        <!--  <p>
+          Digite um número inteiro de 1 á 10, então, click em "Exibir" para
+          saber como se escreve este número.
+        </p> -->
+      </div>
+      <div class="box" id="box-form">
+        <textarea
+          name="chat"
+          id="area-chat"
+          cols="30"
+          rows="10"
+          disabled
+        ></textarea>
+        <div class="box" id="forms">
+          <input
+            class="inputs"
+            type="text"
+            id="msg"
+            placeholder="Digite sua mensagem"
+          />
+          <button class="btn-ver" id="btn-env">Enviar</button>
+        </div>
+      </div>
+      <div id="result">
+        <button class="btn-ver" id="btn-clear">Limpar</button>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
