@@ -25,5 +25,5 @@ const chatEnv = (content) => {
   areaChat.textContent += `\nVocê:   ${content}`;
   inputChat.value = "";
   inputChat.focus();
-  areaChat.scrollTop = 369 * 999900;
+  areaChat.scrollTop = areaChat.scrollHeight;
 };

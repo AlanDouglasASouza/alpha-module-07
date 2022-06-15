@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url('https://cdn.pixabay.com/photo/2015/05/23/17/40/defocus-780809_960_720.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.42);
+    -moz-box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.42);
+    box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.42);    
+}
+
+#container {
+    display: flex;
+    height: auto;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+    gap: 2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.box {
+    width: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#box-title {
+    flex-direction: column;
+    height: 15%;
+    font-size: 14pt;
+    gap: 1rem;
+    padding: 10px;
+    text-align: center;
+}
+
+#box-err {
+    display: none;
+    font-weight: bold;
+    font-size: 25pt;
+    color: red;    
+}
+
+#box-result {
+    display: none;
+    flex-direction: column;
+}
+
+#box-result label {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+#json {
+    padding: 20px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+span {
+    font-size: 15pt;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+#forms {
+    gap: 1rem;
+    padding: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#name-content {
+    display: flex;
+    justify-content: center;    
+    width: 74%;
+    align-items: center;    
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+}
+
+label {
+    font-size: 15pt;
+}
+
+input, select {    
+    width: 250px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 2px;        
+    font-size: 14pt;
+}
+
+.inp-user {
+    text-align: center;
+    width: 70px;  
+}
+
+#birth-date {    
+    width: 100%;
+}
+
+fieldset {
+    display: flex;
+    width: auto;
+    padding: 30px;
+    text-align: center;
+    gap: 1.6rem;
+}
+
+#birth {
+    padding: 40px;
+}
+
+#form-name {
+    width: 100%;
+    padding-left: 15px;
+}
+
+#box-btn {
+    width: 100%;
+}
+
+#select-genre {
+    padding-left: 0;
+    width: 100px;
+    text-align: center;
+}
+
+#btn-ver {
+    width: 130px;
+    height: 40px;
+    font-size: 14pt;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;    
+    transition-duration: 0.3s;
+}
+
+#btn-ver:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15pt;
+    gap: 0.6rem;
+    padding-bottom: 20px;
+    font-size: 16pt;
+}
+
+@media(max-width: 800px) {
+    #container {
+        width: 80%;
+    }
+    #name-content {     
+    width: 88%;    
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons8-editar-utilizador-100.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="box" id="box-title">
+        <h1>Cadastrar</h1>
+        <p>
+          Preencha o formulário com seus dados. O peso deve ser inserido como
+          kilogramas e a altura em centímetros. (Ex. peso: 85; altura: 180)
+        </p>
+      </div>
+      <div class="box" id="box-form">
+        <form class="box" id="forms" action="">
+          <div id="name-content">
+            <div id="name">
+              <label for="form-name">Nome</label>
+              <input
+                type="text"
+                id="form-name"
+                placeholder="Ex: João Alencar"
+                name="name"
+              />
+            </div>
+          </div>
+
+          <div id="birth-date" class="box">
+            <fieldset id="birth">
+              <legend>Data de Nascimento</legend>
+              <div>
+                <label for="form-day">Dia</label>
+                <input
+                  class="inp-user"
+                  id="form-day"
+                  type="number"
+                  placeholder="01"
+                  name="day"
+                />
+              </div>
+
+              <div>
+                <label for="form-month">Mês</label>
+                <input
+                  class="inp-user"
+                  id="form-month"
+                  type="number"
+                  placeholder="01"
+                  name="month"
+                />
+              </div>
+
+              <div>
+                <label for="form-year">Ano</label>
+                <input
+                  class="inp-user"
+                  id="form-year"
+                  type="number"
+                  placeholder="2000"
+                  name="year"
+                />
+              </div>
+            </fieldset>
+          </div>
+          <fieldset>
+            <legend>Caracteristicas</legend>
+            <div>
+              <label for="form-weight">Peso</label>
+              <input
+                type="text"
+                class="inp-user"
+                id="form-weight"
+                placeholder="80.5"
+                name="weight"
+              />
+            </div>
+            <div>
+              <label for="form-height">Altura</label>
+              <input
+                type="text"
+                class="inp-user"
+                id="form-height"
+                placeholder="180"
+                name="height"
+              />
+            </div>
+            <div>
+              <select name="gender" id="select-genre">
+                <option value="" disabled selected>Gênero</option>
+                <option value="male">Homem</option>
+                <option value="female">Mulher</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div id="box-btn" class="box">
+            <button id="btn-ver" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
