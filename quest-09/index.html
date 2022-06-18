@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Calculator</title>
+    <link rel="shortcut icon" href="../assets/icons8-estimativa-48.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="container">      
+      <div class="box" id="box-calc">
+          <div class="box" id="box-title">
+        <h1>Web Calculator</h1>
+        <p>
+          Enter the numbers and which operation you want to do and then click on calculate to get the result.
+        </p>
+      </div>
+        <form action="#" id="form-calc">         
+          <input id="operating" type="text" placeholder="First number"/></br>         
+          <input id="operator" type="text" placeholder="Second number"/></br>          
+          <select name="operation" id="select-operation">
+            <option value="" disabled selected>Choose an operation</option>
+            <option value="addition">Sum</option>
+            <option value="subtraction">Subtract</option>
+            <option value="multiplication">Multiply</option>
+            <option value="division">Divide</option>
+            <option value="potentation">Potentation</option>
+          </select></br>
+          <button id="btn-calc">Calculate</button>
+        </form>
+        <div id="result">
+            <p id="text-result"></p>
+            <h1 id="value-result"></h1>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
