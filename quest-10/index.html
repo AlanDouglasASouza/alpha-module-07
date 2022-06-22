@@ -7,7 +7,7 @@
     <title>Cadastro</title>
     <link
       rel="shortcut icon"
-      href="../../assets/icons8-editar-utilizador-100.png"
+      href="../assets/icons8-editar-utilizador-100.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./index.css" />
@@ -51,7 +51,7 @@
                 <input
                   type="number"
                   id="ipt-price"
-                  placeholder="36.99"
+                  placeholder="2369.99"
                   name="price"
                 />
               </div>
@@ -71,13 +71,7 @@
             </div>
           </div>
 
-          <div class="box" id="response"></div>
-
-          <div id="box-btn" class="box">
-            <button class="btn" type="submit" id="btn-create">
-              Incluir Produto
-            </button>
-          </div>
+          <div class="box" id="response"></div>          
         </form>
       </div>
 
@@ -92,7 +86,9 @@
         </table>
       </div>
       </div>
-      <div id="box-btn-list" class="box">
+      <div id="box-btn" class="box">
+        <button class="btn" id="btn-create-back">Incluir Produto</button>
+        <button class="btn" type="submit" id="btn-create">Incluir Produto</button>
         <button class="btn" id="btn-list">Listar Produtos</button>
       </div>
     </section>
@@ -135,7 +131,8 @@
             <td class="modal-date" id="result-date"></td>
           </tr>
         </table>
-        <button class="btn" id="btn-modal"></button>
+        <button class="btn" id="btn-modal">Listar Produtos</button>
+        <button class="btn" id="btn-modal-edit">Listar Produtos</button>
       </div>
     </div>
     <script src="./index.js"></script>

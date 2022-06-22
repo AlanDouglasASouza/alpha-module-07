@@ -74,7 +74,7 @@ function multiply(num1, num2) {
   return result;
 }
 
-//console.log(multiply(100, -18));
+//console.log(multiply(100, 18));
 
 // Função de potenciação (usando somente a soma, subtração e multiplicação)
 function potentiation(num1, num2) {
