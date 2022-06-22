@@ -1,8 +1,11 @@
+const title = document.querySelector("h1");
+const titleDesc = document.querySelector("p");
 const productName = document.querySelector("#ipt-name");
 const productPrice = document.querySelector("#ipt-price");
 const productDesc = document.querySelector("#text-description");
 const response = document.querySelector("#response");
 const btnCreate = document.querySelector("#btn-create");
+const btnBack = document.querySelector("#btn-create-back");
 const btnList = document.querySelector("#btn-list");
 const divForm = document.querySelector("#box-form");
 const divList = document.querySelector("#product-list");
@@ -16,11 +19,10 @@ const divEdit = document.querySelector("#edit");
 const modal = document.querySelector("#modal");
 const container = document.querySelector("#container");
 const btnModal = document.querySelector("#btn-modal");
-
+const btnModalEdit = document.querySelector("#btn-modal-edit");
 let count = 0;
 let active = true;
-
-const products = [];
+let products = [];
 
 btnCreate.addEventListener("click", (e) => {
   e.preventDefault();
@@ -28,11 +30,28 @@ btnCreate.addEventListener("click", (e) => {
     return;
   }
   createProduct();
-
   clear();
 
   console.log(products);
 });
+
+btnBack.onclick = () => {
+  let i = 0;
+
+  active = true;
+  divForm.style.display = "flex";
+  divList.style.display = "none";
+  btnCreate.style.display = "block";
+  btnBack.style.display = "none";
+  response.textContent = "";
+  title.textContent = "Cadastrar Produtos";
+  titleDesc.style.display = "block";
+
+  while (i < products.length) {
+    deleteProduct(products[i].id);
+    i++;
+  }
+};
 
 btnModal.addEventListener("click", (e) => {
   e.preventDefault();
@@ -40,13 +59,33 @@ btnModal.addEventListener("click", (e) => {
   container.style.display = "flex";
 });
 
+btnModalEdit.addEventListener("click", (e) => {
+  let i = 0;
+  e.preventDefault();
+
+  const product = findOne(parseInt(resultId.textContent));
+
+  modal.style.display = "none";
+  container.style.display = "flex";
+
+  product.nome = resultName.value;
+  product.valor = parseFloat(resultPrice.value.substring(2));
+  product.descricao = resultDesc.value;
+
+  while (i < products.length) {
+    deleteProduct(products[i].id);
+    i++;
+  }
+  listProduct();
+});
+
 const validate = () => {
   try {
     if (!productName.value || !productPrice.value || !productDesc.value) {
-      throw "Por favor, preencha todos os campos antes de cadastrar!";
+      throw "Preencha todos os campos antes de cadastrar!";
     }
   } catch (err) {
-    response.textContent = err;
+    response.textContent = `Falha no cadastro do produto: ${err}`;
     return false;
   }
   return true;
@@ -56,7 +95,6 @@ const clear = () => {
   productName.value = "";
   productDesc.value = "";
   productPrice.value = "";
-  response.textContent = "";
   productName.focus();
 };
 
@@ -73,17 +111,28 @@ const createProduct = () => {
     valor: productPrice.value,
     incluidoEm: Date.now(),
   });
+  response.textContent = `Produto '${productName.value.toUpperCase()}' incluído com sucesso!`;
 };
 
 const listProduct = () => {
   let i = 0;
 
+  try {
+    if (products.length == 0) throw "Ops, nenhum produto foi cadastrado!  :(";
+  } catch (e) {
+    return (response.textContent = e);
+  }
+
+  title.textContent = "Lista de Produtos";
+  titleDesc.style.display = "none";
   divForm.style.display = "none";
   divList.style.display = "flex";
+  btnCreate.style.display = "none";
+  btnBack.style.display = "block";
 
   if (active) {
     while (i < products.length) {
-      const classLine = i % 2 === 0 ? "list-black" : "list-white";
+      const classLine = "list-black";
 
       createTable(products[i], classLine);
       i++;
@@ -113,32 +162,38 @@ const print = (id) => {
   resultId.textContent = product.id;
   resultName.value = product.nome;
   resultDesc.value = product.descricao;
-  resultPrice.value = product.valor;
+  resultPrice.value = `R$ ${parseFloat(product.valor).toFixed(2)}`;
   resultDate.textContent = new Date(product.incluidoEm).toLocaleString();
 };
 
 const editProduct = (id) => {
-  const product = findOne(id);
-  const tdName = document.querySelector(`#name-${id}`);
-  const tdPrice = document.querySelector(`#price-${id}`);
-
   print(id);
+  active = true;
+
+  btnModal.style.display = "none";
+  btnModalEdit.style.display = "block";
 
   resultName.disabled = false;
   resultPrice.disabled = false;
   resultDesc.disabled = false;
-
-  product.nome = resultName.value;
-  product.valor = resultPrice.value;
-  product.descricao = resultDesc.value;
-
-  tdName.textContent = resultName.value;
-  tdPrice.textContent = resultPrice.value;
 };
 
 const deleteProduct = (id) => {
   const line = document.querySelector(`#line-${id}`);
-  line.style.display = "none";
+  line.outerHTML = "";
+};
+
+const remove = (id) => {
+  let i = 0;
+  const newsProducts = [];
+
+  while (i < products.length) {
+    if (products[i].id != id) {
+      newsProducts.push(products[i]);
+    }
+    i++;
+  }
+  products = newsProducts;
 };
 
 const createTable = (productInf, classLine) => {
@@ -160,17 +215,16 @@ const createTable = (productInf, classLine) => {
 
   line.className = classLine;
   line.id = `line-${productInf.id}`;
-  name.id = `name-${productInf.id}`;
+  name.style = "cursor: pointer";
   name.className = "table-product";
-  name.textContent = productInf.nome;
+  name.textContent = `#0${productInf.id}  ${productInf.nome}`;
 
   name.addEventListener("click", (e) => {
     e.preventDefault();
     print(productInf.id);
   });
 
-  price.id = `price-${productInf.id}`;
-  price.textContent = productInf.valor;
+  price.textContent = `R$ ${parseFloat(productInf.valor).toFixed(2)}`;
 
   iconEdit.className = "material-icons";
   iconDelete.className = "material-icons";
@@ -186,6 +240,8 @@ const createTable = (productInf, classLine) => {
     e.preventDefault();
 
     deleteProduct(productInf.id);
+    remove(productInf.id);
+    console.log(`esta assim o remove: ${products}`);
   });
 };
 
