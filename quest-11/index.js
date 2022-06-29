@@ -110,6 +110,7 @@ btnSearch.addEventListener("click", (e) => {
     tableList.style.display = "block";
     responseSearch.style.display = "none";
     if (searchObj.length > 0) {
+      console.log(searchObj);
       clearTable(searchObj);
     }
     searchObj = [];
@@ -125,7 +126,6 @@ btnSearch.addEventListener("click", (e) => {
     if (typeof search(products, compare) === "string")
       throw search(products, compare);
   } catch (e) {
-    alert("Entrou no err");
     tableList.style.display = "none";
     responseSearch.style.display = "block";
     responseSearch.textContent = e;
