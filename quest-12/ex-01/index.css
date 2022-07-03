@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+#box-title {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;   
+    color: #ffffff;
+    gap: 1rem;
+    font-size: 15pt;
+}
+
+h1{
+    font-size: 30pt;
+}
+
+#box-calc {
+    flex-direction: column;
+    padding: 10px;   
+    border-radius: 7px;    
+    background-color: rgba(0, 0, 0, 0.93);
+}
+
+#form-calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 0.5rem;
+    flex-wrap: wrap; 
+}
+
+.btn {    
+    width: 130px;
+    height: 40px;
+    font-size: 14pt;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    transition-duration: 0.3s;  
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.result {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+@media(max-width: 650px) {
+    .box {       
+        width: 85%;
+    }
+}

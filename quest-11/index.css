@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url('https://cdn.pixabay.com/photo/2015/05/23/17/40/defocus-780809_960_720.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;  
+}
+
+#container {
+    display: flex;
+    height: auto;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+    gap: 2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.795);
+    color: black;
+}
+
+.box {
+    width: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#box-title {
+    flex-direction: column;
+    height: 15%;
+    font-size: 14pt;
+    gap: 1rem;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+#forms {
+    gap: 1rem;
+    padding: 15px;
+}
+
+.form-content {
+    display: flex;
+    justify-content: space-between;    
+    width: 90%;
+    align-items: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+}
+
+label {
+    font-size: 11pt;
+}
+
+input {    
+    width: 100px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 2px;        
+    font-size: 14pt;
+    padding-left: 15px;
+}
+
+#ipt-name {
+    width: 90%;    
+}
+
+#ipt-price {
+    padding-left: 0;
+    text-align: center;
+}
+
+#price {
+    width: 110px;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 14pt;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#response {
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(34, 34, 34);
+}
+
+#box-btn {   
+  height: 70px;
+  width: 70%;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: -20px;
+  
+}
+
+.btn {
+    width: 160px;
+    height: 40px;
+    font-size: 14pt;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;    
+    transition-duration: 0.3s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
+#btn-create-back {
+    display: none;
+}
+
+#btn-list {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: #ffffff;
+    border: none;
+}
+
+#btn-list:hover {
+    background-color: rgb(31, 31, 31);    
+}
+
+/* Formatação da tabela de listas de Produtos */
+#product-list{
+    display: none;
+    gap: 1.5rem;
+}
+
+#box-search {
+    width: 88%;
+    justify-content: space-between;
+}
+
+#ipt-search {
+    width: 80%;
+    background-color: #f7f7f7;
+}
+
+#btn-search {
+    width: 120px;
+    height: 35px;
+}
+
+#response-search {
+    display: none;
+    font-size: 15pt;
+    font-weight: bold;
+    color: black;
+}
+
+.table-title {
+    background-color: rgb(65, 65, 65);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+.list-black {
+    background-color: rgb(204, 194, 194);
+}
+
+td {
+    width: 80px;
+    text-align: center;
+    height: 20px;
+    border: none;
+    padding: 8px;
+}
+
+.table-product {
+    width: 350px;
+    text-align: left;
+}
+
+.table-price {
+    width: 110px;
+}
+
+/* Resultado e edição */
+#edit {
+    flex-direction: column;
+    display: none;
+}
+
+#edit label {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#edit p {
+    padding-left: 15px;
+}
+
+.ipt-result{
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.results {
+    width: 100%;    
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 15px;
+    font-weight: normal;
+}
+
+/* Modal de resultado e Edição */
+#modal {
+    display: none;
+    width: 90%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+   
+}
+
+#box-modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal-title {
+    background-color: rgb(65, 65, 65);
+    color: #ffffff;
+}
+
+.modal-ident {
+    width: 40px;
+}
+.modal-product {
+    width: 280px;
+    text-align: left;
+}
+
+.modal-desc {
+    width: 460px;
+    text-align: left;
+}
+
+.modal-date {
+    width: 200px;
+}
+
+.modal-price {
+    width: 150px;
+}
+
+#result-price {
+    padding-left: 0;
+    text-align: center;  
+}
+
+#btn-modal, #btn-modal-edit {
+    background-color: rgb(65, 65, 65);
+    color: #ffffff;
+}
+
+#btn-modal-edit {
+    display: none;
+}
+
+span, button, #title-name-tab, #title-price-tab {
+    cursor: pointer;
+}
+
+@media(max-width: 1100px) {
+    #container {
+        width: 80%;
+    }
+    #name-content {     
+    width: 88%;    
+    }
+}
