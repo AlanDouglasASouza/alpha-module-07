@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Gentium Book Plus', serif;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box-container {
+    width: 100vw;
+    height: 100vh;   
+    align-items: center;
+    -webkit-box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.3);
+}
+
+#box-title {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 35pt;
+    color: #ffffff;
+}
+
+#box-content {
+    width: 80%;
+    height: 500px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(32, 15, 0, 0.95);
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 25%;
+    height: 60%;   
+    color: #ffffff;
+    font-size: 1.7vw;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px -149px 36px -45px rgba(0, 0, 0, 0.94);
+    -moz-box-shadow: inset 0px -149px 36px -45px rgba(0, 0, 0, 0.94);
+    box-shadow: inset 0px -149px 36px -45px rgba(0, 0, 0, 0.94);
+    transition-duration: 0.2s;
+}
+
+.box:hover {
+    -webkit-box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px 0px 300px 200px rgba(255, 255, 255, 0.5);
+    color: rgb(32, 15, 0);
+    align-items: center;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+#box-brigadeiro, [data-page="brigadeiro"] {   
+    background-image: url('../assets/page-brigadeiro.jpg');
+}
+
+#box-cupcakes, [data-page="cupcakes"] {    
+    background-image: url('../assets/page-cupcake.jpg');
+}
+
+#box-candy, [data-page="candy"] {
+    background-image: url('../assets/page-candy.jpg');
+}
+
+#box-home, [data-page="home"] {
+    background-image: url('../assets/page-home.jpg');
+}
