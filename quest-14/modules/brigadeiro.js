@@ -1,6 +1,6 @@
 const app = document.querySelector("#app");
 
-export function briga(eventHome, eventCupe, eventCandy) {
+export function brigadeiro(eventHome, eventCupe, eventCandy) {
   app.innerHTML = `
     <section class="container" id="box-container" data-page="brigadeiro">
         <div class="container" id="box-content">
