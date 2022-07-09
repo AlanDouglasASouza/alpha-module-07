@@ -1,15 +1,14 @@
-import { briga } from "./modules/brigadeiro.js";
+import { brigadeiro } from "./modules/brigadeiro.js";
 import { candy } from "./modules/candy.js";
 import { cupcake } from "./modules/cupcake.js";
 import { home } from "./modules/home.js";
 
-const app = document.querySelector("#app");
 const routes = {
   "/": function () {
     home(events("/brigadeiros"), events("/cupcakes"), events("/doces"));
   },
   "/brigadeiros": function () {
-    briga(events("/"), events("/cupcakes"), events("/doces"));
+    brigadeiro(events("/"), events("/cupcakes"), events("/doces"));
   },
   "/cupcakes": function () {
     cupcake(events("/"), events("/brigadeiros"), events("/doces"));
@@ -51,4 +50,4 @@ window.addEventListener("onstatechange", (e) => {
 });
 
 window.addEventListener("load", router);
-window.addEventListener("hashchange", router);
+//window.addEventListener("hashchange", router);
