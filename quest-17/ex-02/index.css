@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/background-prev-tempo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;    
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: auto;
+}
+
+#box-title {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;   
+    color: #ffffff;
+    gap: 1rem;
+    font-size: 15pt;
+}
+
+h1{
+    font-size: 30pt;
+}
+
+#box-calc {
+    flex-direction: column;
+    padding: 10px;   
+    border-radius: 7px;  
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#form-calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+select {
+    width: 300px;
+    height: 40px;
+    font-size: 14pt;   
+    text-align: center;
+    border-radius: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    font-size: 14pt;
+    font-weight: bold;   
+    border-radius: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+table {
+    width: 90%;
+}
+
+.title-tab {
+    height: 40px;
+    background-color: #363636;
+    color: rgb(255, 255, 255);
+    width: 120px;
+}
+
+.content-tab {    
+    align-items: center;
+    height: 30px;
+    background-color: #ffffff;
+    color: black;
+    width: auto;
+    font-size: 12pt;
+    text-align: center;
+}
+
+img {
+    height: 40px;
+}
+
+@media(max-width: 800px) {
+    .box {       
+        width: 85%;
+    }
+    #result {
+        width: 250px;
+        height: 250px;
+    }
+}

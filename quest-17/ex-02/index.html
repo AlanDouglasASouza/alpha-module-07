@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previsão do Tempo</title>
+    <link rel="shortcut icon" href="./assets/favicon-previsao-tempo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="container">      
+      <div class="box" id="box-calc">
+        <div class="box" id="box-title">
+          <h1>Previsão do tempo</h1>
+          <p>
+            Escolha o estado e em seguida a cidade para consultar a previsão do tempo!
+          </p>
+        </div>
+        <div id="form-calc">
+                  
+          <select name="operation" id="select-operation">
+            <option value="" disabled selected>Escolha um estado</option>            
+
+          </select></br>
+        </div>
+        <div id="result">
+
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
