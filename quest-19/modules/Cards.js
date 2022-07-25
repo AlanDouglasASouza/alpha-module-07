@@ -2,7 +2,7 @@ import Random from "./Random.js";
 
 export default function Cards() {
     const numCard = [];
-    const numRandom = Random(10, 1);
+    const numRandom = Random(75, 1);
 
     for (let i = 0; i < 10; i++) {
         numCard.push({
@@ -15,35 +15,29 @@ export default function Cards() {
         return numCard;
     }
 
-    function dialNumber(num) {
-        numCard.forEach((element) => {
+    function selectedNumber(num) {
+        for (const element of numCard) {
             if (element.number == num) {
                 element.drawn = true;
+
                 return true;
             }
-
-            return false;
-        });
+        }
+        return false;
     }
 
     function completCard() {
-        let res;
-
-        numCard.forEach((element) => {
+        for (const element of numCard) {
             if (element.drawn == false) {
-                res = false;
                 return false;
             }
-
-            res = true;
-        });
-
-        return res;
+        }
+        return true;
     }
 
     return {
         getCard,
-        dialNumber,
+        selectedNumber,
         completCard,
     };
 }
