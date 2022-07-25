@@ -24,13 +24,13 @@ export default function Random(max, min) {
         return true;
     }
 
+    function getter() {
+        return numbersDrawn;
+    }
+
     return {
         randomNumber,
         testNumber,
+        getter,
     };
 }
-
-/* const a = Random(10, 1);
-for (i = 0; i < 11; i++) {
-    console.log(a.randomNumber());
-} */
