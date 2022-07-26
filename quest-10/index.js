@@ -69,6 +69,13 @@ btnModalEdit.addEventListener("click", (e) => {
   container.style.display = "flex";
 
   product.nome = resultName.value;
+  /**
+   * Hum... esse substring(2) pode ser quebrado facilmente pelo usuário.
+   * 
+   * Sugestão: exibir o símbolo da moeda ("R$") numa span separada do input,
+   * e usar CSS pra fazer parecer que é parte do input (i.e. manter a
+   * aparência atual)
+   */
   product.valor = parseFloat(resultPrice.value.substring(2));
   product.descricao = resultDesc.value;
 
@@ -79,9 +86,26 @@ btnModalEdit.addEventListener("click", (e) => {
   listProduct();
 });
 
+/**
+ * A validação está parcial. Alguns "casos omissos":
+ * 
+ * Caso 1: usuário digita " " no nome e descrição: o código aceita...
+ * Solução possível: productName.value.trim()
+ * 
+ * Caso 2: valor 0 ou negativa: código aceita
+ * Solução possível: if (parseFloat(productPrice.value) <= 0) return false;
+ * 
+ */
 const validate = () => {
   try {
     if (!productName.value || !productPrice.value || !productDesc.value) {
+      /**
+       * Até onde entendo, não é boa prática dar throw numa string.
+       * 
+       * O esperado é que você dê throw num objeto do tipo Error, ou seja:
+       * 
+       * throw new Error("Preencha todos os campos antes de cadastrar!");
+       */
       throw "Preencha todos os campos antes de cadastrar!";
     }
   } catch (err) {
@@ -196,6 +220,14 @@ const remove = (id) => {
   products = newsProducts;
 };
 
+/**
+ * O parâmetro "classLine" parece ter sido uma generalidade desnecessária.
+ * Ou seja, o código foi escrito para aceitar qualquer "classLine",
+ * mas na prática a função createTable só é invocada em um lugar, mais 
+ * ou menos assim:
+ * createTable(products[i], "list-black");
+ * 
+ */
 const createTable = (productInf, classLine) => {
   const line = createNode("tr");
   const name = createNode("td");
