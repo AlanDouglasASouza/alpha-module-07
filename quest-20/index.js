@@ -2,9 +2,9 @@ import Avatar from "./modules/Avatar.js";
 import Avatar2 from "./modules/Avatar2.js";
 
 const turing = new Avatar(12, 23);
-const loveLace = new Avatar2(50, 50);
+const lovelace = new Avatar2(50, 50);
 
-console.log(turing, loveLace);
+console.log(turing, lovelace);
 
 turing.forward();
 turing.collectCoins();
@@ -14,10 +14,10 @@ turing.back();
 
 console.log("Turing", turing);
 
-loveLace.forward();
-loveLace.collectCoins();
-loveLace.left();
-loveLace.forward();
-loveLace.back();
+lovelace.forward();
+lovelace.collectCoins();
+lovelace.left();
+lovelace.forward();
+lovelace.back();
 
-console.log("Love Lace", loveLace);
+console.log("Lovelace", lovelace);
