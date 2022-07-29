@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulário</title>
+        <link rel="shortcut icon" href="" type="image/x-icon" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <form action="" class="box">
+            <div id="box-input" class="box">
+                <label for="fullname">Insira um Json</label>
+                <input type="text" id="fullname" />
+            </div>
+
+            <input type="button" value="JSON.parse" id="btn-submit" />
+            <div id="result"></div>
+        </form>
+
+        <script type="module" src="./index.js"></script>
+    </body>
+</html>
+
+<!-- 
+    Questão 04 - Crie uma classe Error em um arquivo 'Error.js' que possua os métodos 'setStatus' (para definir o status), 'setInfo' (para definir a informação do erro) e 'getObject' (para obter o objeto que contém o status e a informação do erro). Crie uma página web que peça ao usuário para inserir um objeto do tipo JSON e clique em um botão (JSON.parse). Caso a informação do usuário esteja correta, exibir a informação de objeto criado com sucesso. Caso dê erro, capturá-lo e utilizar a classe Error criada para instanciar o erro e mostrar o resultado ao usuário. Utilize flex-box para centralizar o conteúdo de sua página.
+ -->
